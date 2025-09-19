@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #a538a8;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Topo */
+.top-bar {
+    background-color: white;
+    color: #a538a8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+.top-bar .social a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #a538a8;
+    font-weight: bold;
+}
+
+/* Menu */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #a538a8;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-bar .logo img {
+    height: 50px;
+}
+
+/* lista de links */
+.list-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.list-nav li {
+    position: relative; /* necessário pro submenu */
+}
+.list-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    font-weight: bold;
+}
+.list-nav a:hover {
+    background: #a538a8;
+    border-radius: 5px;
+}
+
+/* Submenu sobreposto */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* logo abaixo do item principal */
+    left: 0;
+    background: rgba(123, 46, 123, 0.95);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    z-index: 2000;
+
+    /* animação */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+.submenu li a {
+    padding: 12px 15px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+.submenu li a:hover {
+    background: #a538a8;
+}
+/* Mostrar submenu */
+.list-nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botão hamburguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+/* Banner */
+.header {
+    height: 100vh;
+    background-image: url("./assets/Paroquia.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.text-header {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+.text-header h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.text-header h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+.button a {
+    text-decoration: none;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.button a:hover {
+    background-color: white;
+    color: #a538a8;
+}
+
+/* Seções */
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+section h2 {
+    font-size: 32px;
+    color: #a538a8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+section p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #a538a8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .list-nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(123, 46, 123, 0.95);
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .list-nav.active {
+        display: flex;
+    }
+    .list-nav li:hover .submenu {
+        position: relative; /* no mobile, submenu abre dentro da caixa */
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+    .text-header h1 {
+        font-size: 40px;
+    }
+}
