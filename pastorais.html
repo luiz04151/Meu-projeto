@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastorais - Paróquia Santa Teresinha</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #a538a8;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Topo */
+.top-bar {
+    background-color: white;
+    color: #a538a8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+.top-bar .social a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #a538a8;
+    font-weight: bold;
+}
+
+/* Menu */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #a538a8;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-bar .logo img {
+    height: 50px;
+}
+
+/* lista de links */
+.list-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.list-nav li {
+    position: relative; /* necessário pro submenu */
+}
+.list-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    font-weight: bold;
+}
+.list-nav a:hover {
+    background: #a538a8;
+    border-radius: 5px;
+}
+
+/* Submenu sobreposto */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* logo abaixo do item principal */
+    left: 0;
+    background: rgba(123, 46, 123, 0.95);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    z-index: 2000;
+
+    /* animação */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+.submenu li a {
+    padding: 12px 15px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+.submenu li a:hover {
+    background: #a538a8;
+}
+/* Mostrar submenu */
+.list-nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botão hamburguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+/* Banner */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    place-self: center;
+    height: 100vh;
+    background-image: url("./assets/cordeiro de Deus.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    filter: brightness(70%);
+}
+
+.text-header strong{
+    color: #a538a8;
+}
+
+.p1{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+}
+
+.text-header {
+    color: white;
+    z-index: 2;
+}
+.text-header h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.text-header h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 60px;
+    margin-bottom: 25px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.button a {
+    text-decoration: none;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.button a:hover {
+    background-color: white;
+    color: #a538a8;
+}
+
+/* Seções */
+section {
+    padding: 80px 0px;
+    ;
+}
+section h2 {
+    font-size: 32px;
+    color: #a538a8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+section p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #a538a8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .menu-toggle img {
+        width: 30px;
+        height: 30px;
+    }   
+
+    .list-nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(123, 46, 123, 0.95);
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .list-nav.active {
+        display: flex;
+    }
+    .list-nav li:hover .submenu {
+        position: relative; /* no mobile, submenu abre dentro da caixa */
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+    .text-header h1 {
+        font-size: 40px;
+    }
+}
+  </style>
+  <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+
+  <!-- Topo -->
+  <div class="top-bar">
+    <p></p>
+    <div class="social">
+      <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>
+      <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
+      <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
+      <a href="desevolvimento.html">Podcast</a>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="./assets/Logo1.png" alt="Logo da Igreja">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="">
+    </div>
+    <ul class="list-nav" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pastorais.html" class="active">Pastorais</a></li>
+      <li><a href="desevolvimento.html">Grupos</a></li>
+      <li><a href="desevolvimento.html">Doação</a></li>
+      <li><a href="desevolvimento.html">Agenda</a></li>
+      <li><a href="desevolvimento.html">Destaques</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner menor -->
+  <header class="header" style="height: 50vh;">
+    <div class="text-header">
+      <h1>Nossas Pastorais</h1>
+      <div class="button">
+                <a href="#inscricao">Saiba como se inscrever</a>
+            </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo das pastorais -->
+  <main class="p1">
+    <section id="catequese">
+      <h2>Pastoral da Catequese</h2>
+      <p>Responsável pela formação cristã das crianças, jovens e adultos, preparando-os para os sacramentos.</p>
+    </section>
+
+    <section id="dizimo">
+      <h2>Pastoral do Dízimo</h2>
+      <p>Trabalha a conscientização dos fiéis sobre a importância do dízimo como gesto de fé e partilha.</p>
+    </section>
+
+    <section id="batismo">
+      <h2>Pastoral do Batismo</h2>
+      <p>Orienta e acompanha as famílias no processo de preparação para o sacramento do Batismo.</p>
+    </section>
+
+    <section id="liturgia">
+      <h2>Pastoral da Liturgia</h2>
+      <p>Organiza e anima as celebrações litúrgicas, cuidando para que sejam vividas com fé e participação.</p>
+    </section>
+
+    <section id="saude">
+      <h2>Pastoral da Saúde</h2>
+      <p>Leva conforto espiritual e humano aos doentes e pessoas em situação de vulnerabilidade.</p>
+    </section>
+
+    <section id="familia">
+      <h2>Pastoral da Família</h2>
+      <p>Promove a valorização da família cristã, oferecendo encontros, retiros e momentos de espiritualidade.</p>
+    </section>
+
+    <section id="juventude">
+      <h2>PASCOM</h2>
+      <p>Pastoral da Comunicação, responsável por registrar, divulgar e comunicar as atividades da paróquia.</p>
+    </section>
+
+    <section>
+      <h2>Pastoral da Acolhida</h2>
+      <p>Recebe e acolhe os fiéis durante as celebrações, oferecendo hospitalidade e integração.</p>
+    </section>
+
+    <section id="inscricao">
+      <h2>Inscrição</h2>
+      <p>A Inscrição pode ser realizada presensialmente na paroquia santa teresinha. <br>
+    Ou pode ser feita no <a href="https://api.whatsapp.com/send/?phone=5586988779778&text&type=phone_number app_absent=0">WhatsApp</a>.</p>
+
+
+
+  
+  <!-- Script menu -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
