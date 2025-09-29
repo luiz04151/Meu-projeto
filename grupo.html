@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupos e Movimentos - Paróquia Santa Teresinha</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    place-self: center;
+    height: 100vh;
+    background-image: url("./assets/EJC.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    filter: brightness(70%);
+}
+  </style>
+</head>
+<body>
+
+  <!-- Topo -->
+  <div class="top-bar">
+    <p></p>
+    <div class="social">
+      <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>
+      <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
+      <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
+      <a href="desevolvimento.html">Podcast</a>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="./assets/Logo1.png" alt="Logo da Igreja">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="">
+    </div>
+    <ul class="list-nav" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pastorais.html">Pastorais</a></li>
+      <li><a href="grupo.html" class="active">Grupos</a></li>
+      <li><a href="desevolvimento.html">Doação</a></li>
+      <li><a href="desevolvimento.html">Agenda</a></li>
+      <li><a href="desevolvimento.html">Destaques</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner menor -->
+  <header class="header" style="height: 50vh;">
+    <div class="text-header">
+      <h1>Grupos e Movimentos</h1>
+      <div class="button">
+                <a href="#inscricao">Venha fazer parte da nossa família</a>
+            </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo das pastorais -->
+  <main class="p1">
+    <section id="EJC">
+      <h2>Encontro de Jovens com Cristo(EJC)</h2>
+      <p>O EJC tem como motivação única levar Cristo aos jovens, dando a eles oportunidade de verem e sentirem o mundo sob o prisma do amor de Deus.<br>
+O Encontro de Jovens com Cristo não se resume nas atividades de três dias, pois o importante é o jovem querer viver e agir como Jesus propôs aos seus seguidores. O EJC é uma atividade cuja dinâmica se inicia meses antes do Encontro e se estende, através do Pós-Encontro, até o engajamento total do jovem em uma comunidade cristã.
+Por meio do EJC o jovem deve compreender a necessidade de valores absolutos e de um Ser Supremo que está por trás desses valores. E, assim compreendendo, encontrar Cristo e, através Dele, ver e alcançar a Deus. É o encontro da juventude com a Fé e a Igreja de Cristo. Essa compreensão da natureza e das conseqüências do EJC é o caminho através do qual os propósitos do EJC podem ser estabelecidos. Como instrumento da Igreja, o EJC tem uma missão evangelizadora. Como forma de propiciar o encontro do jovem consigo mesmo, com o próximo e com Deus, o EJC tem uma missão de conversão.</p>
+    </section>
+
+    <section id="ECC">
+      <h2>Encontro de Casais com Cristo(ECC)</h2>
+      <p></p>
+    </section>
+
+    <section id="RCC">
+      <h2>Renovação Carismatica Católica(RCC)</h2>
+      <p></p>
+    </section>
+
+    <section>
+        <h2>Mães que Oram Pelos Filhos</h2>
+    </section>
+
+    <section>
+        <h2>Terço dos Homens</h2>
+    </section>
+
+    <section>
+        <h2>Apostolado do Imac. Coração de Maria</h2>
+    </section>
+
+
+  
+  <!-- Script menu -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
