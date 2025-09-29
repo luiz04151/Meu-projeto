@@ -1,155 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pastorais - Paróquia Santa Teresinha</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    place-self: center;
-    height: 100vh;
-    background-image: url("./assets/cordeiro de Deus.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    filter: brightness(70%);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paróquia Santa Teresinha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Topo -->
-  <div class="top-bar">
-    <p></p>
-    <div class="social">
-      <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>
-      <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
-      <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
-      <a href="desevolvimento.html">Podcast</a>
+    <!-- Topo -->
+    <div class="top-bar">
+        <p></p>
+        <div class="social">
+            <a href="https://api.whatsapp.com/send/?phone=5586988779778&text&type=phone_number&app_absent=0">WhatsApp</a>
+            <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
+            <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
+            <a href="desevolvimento.html">Podcast</a>
+        </div>
     </div>
-  </div>
 
-  <!-- Menu -->
-  <nav class="nav-bar">
-    <div class="logo">
-      <img src="./assets/Logo1.png" alt="Logo da Igreja">
-    </div>
-    <div class="menu-toggle" id="menu-toggle">
-      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="">
-    </div>
-    <ul class="list-nav" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="pastorais.html" class="active">Pastorais</a></li>
-      <li><a href="grupo.html">Grupos</a></li>
-      <li><a href="desevolvimento.html">Doação</a></li>
-      <li><a href="desevolvimento.html">Agenda</a></li>
-      <li><a href="desevolvimento.html">Destaques</a></li>
-    </ul>
-  </nav>
+    <!-- Menu -->
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Logo da Igreja">
+        </div>
 
-  <!-- Banner menor -->
-  <header class="header" style="height: 50vh;">
-    <div class="text-header">
-      <h1>Nossas Pastorais</h1>
-      <div class="button">
-                <a href="#inscricao">Saiba como se inscrever</a>
+        <!-- Botão hambúrguer -->
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="./assets/icons8-menu-hambúrguer-50.png" alt="">
+        </div>
+
+        <ul class="list-nav" id="menu">
+            <li>
+                <a href="pastorais.html">Pastorais</a>
+                
+            </li>
+            <li>
+                <a href="grupo.html">Grupos</a>
+                
+            </li>
+            <li>
+
+                
+                <a href="desevolvimento.html">Doação</a>
+                
+            </li>
+           
+            <li>
+                <a href="agenda.html">Agenda</a>
+                
+            </li>
+
+             <li>
+                <a href="desevolvimento.html">Destaques</a>
+                
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div class="header">
+        <div class="text-header">
+            <h3>Seja bem-vindo</h3>
+            <h1>"Farei cair do céu uma <br> <strong>chuva de rosas</strong>"</h1>
+            <div class="button">
+                <a href="#Descrição">CONHEÇA MAIS NOSSA IGREJA</a>
             </div>
+        </div>
     </div>
-  </header>
 
-  <!-- Conteúdo das pastorais -->
-  <main class="p1">
-    
-    <section id="catequese">
-        <div style="text-align: center;">
-    <img src="./assets/catequese.png" width="100px" height="100px">
-    </div>
-      <h2>Pastoral da Catequese</h2>
-      <p>Responsável pela formação cristã das crianças, jovens e adultos, preparando-os para os sacramentos.</p>
+    <div class="p1">
+           <!-- Seções -->
+    <section id="Descrição">
+        <h2>Descrição</h2>
+        <p>A paróquia foi fundada em 18/04/1985, tendo por padroeira Santa Teresinha do Menino Jesus, fica localizada R. José Ebaid N° 1047 no bairro Dirceu II, região sudeste da cidade de Teresina-PI. Ao longo desses mais de trinta anos de história vivemos momentos incríveis e queremos partilhar todos eles com você! Então aperte seu cinto e embarque conosco nessa aventura incrível que é evangelizar.</p>
     </section>
 
-    <section id="dizimo">
-         <div style="text-align: center;">
-    <img src="./assets/dízimo.png" width="150px" height="100px">
-    </div>
-      <h2>Pastoral do Dízimo</h2>
-     
-      <p>Trabalha a conscientização dos fiéis sobre a importância do dízimo como gesto de fé e partilha.</p>
+    <section id="santa">
+  <h2>Nossa Padroeira</h2>
+  <div class="imagem-container">
+    <img src="./assets/santa teresinha.png" alt="Imagem de Santa Teresinha">
+    <p>
+      Santa Teresinha nos ensina que, ao confiar plenamente em Deus, recebemos graças em forma de rosas. 
+      Que cada rosa seja um símbolo do amor divino que floresce em nossas vidas.  
+      <em>"Não são grandes coisas que Deus faz por nós que nos tornam santos, mas o que fazemos com amor por Ele e pelos irmãos."</em>
+    </p>
+  </div>
+</section>
+       
+       
+       
     </section>
 
-    <section id="batismo">
-        <div style="text-align: center;">
-    <img src="./assets/batismo.png" width="100px" height="100px">
-    </div>
-      <h2>Pastoral do Batismo</h2>
-      <p>Orienta e acompanha as famílias no processo de preparação para o sacramento do Batismo.</p>
+    <section id="comunidades">
+        <h2>Nossas comunidades</h2>
+        <p>São Pedro - Conjunto Dirceu II Q-305 C-02<br>
+            Sto Inácio Loyola - Conj. Dirceu II Q-323 C-16<br>
+            S. Paulo - Conjunto Dirceu II Q-267 C-08<br>
+            Sta Paulina - Conj. Dirceu II Q-373 C-06<br>
+            N.Sra de Fátima - conjunto Dirceu II Q-206 C-15
+        </p>
     </section>
 
-    <section id="liturgia">
-        <div style="text-align: center;">
-    <img src="./assets/liturgia.jpg" width="125px" height="125px">
-    </div>
-      <h2>Pastoral da Liturgia</h2>
-      <p>Organiza e anima as celebrações litúrgicas, cuidando para que sejam vividas com fé e participação.</p>
+    <!--<section id="agenda">
+        <h2>Agenda</h2>
+        <p>Em desenvolvimento...</p>
     </section>
 
-    <section id="saude">
-        <div style="text-align: center;">
-    <img src="./assets/saude.jpg" width="125px" height="125px">
+    <section id="Momentos">
+        <h2>Nossos eventos</h2>
+        <p>Em desenvolvimento...</p>
+    </section>-->
+
     </div>
-      <h2>Pastoral da Saúde</h2>
-      <p>Leva conforto espiritual e humano aos doentes e pessoas em situação de vulnerabilidade.</p>
-    </section>
-
-    <section id="familia">
-        <div style="text-align: center;">
-    <img src="./assets/familia.png" width="200px" height="150px">
-    </div>
-      <h2>Pastoral da Família</h2>
-      <p>Promove a valorização da família cristã, oferecendo encontros, retiros e momentos de espiritualidade.</p>
-    </section>
-
-    <section id="pascom">
-        <div style="text-align: center;">
-    <img src="./assets/pascom.png" width="150px" height="125px">
-    </div>
-      <h2>PASCOM</h2>
-      <p>Pastoral da Comunicação, responsável por registrar, divulgar e comunicar as atividades da paróquia.</p>
-    </section>
-
-    <section id="acolhida">
-        <div style="text-align: center;">
-    <img src="./assets/acolhida.png" width="200px" height="150px">
-    </div>
-      <h2>Pastoral da Acolhida</h2>
-      <p>Recebe e acolhe os fiéis durante as celebrações, oferecendo hospitalidade e integração.</p>
-    </section>
-
-   
-    <section id="inscricao">
-      <h2>Inscrição</h2>
-      <p>A Inscrição pode ser realizada presensialmente na paroquia santa teresinha. <br>
-    Ou pode ser feita no <a href="https://api.whatsapp.com/send/?phone=5586988779778&text&type=phone_number app_absent=0">WhatsApp</a>.</p>
+ 
 
 
+    <!-- Script do menu -->
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
 
-  
-  <!-- Script menu -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-  </script>
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
-
 
