@@ -8,8 +8,25 @@ body {
     font-family: 'Arial', Helvetica, sans-serif;
     line-height: 1.6;
     color: #ff66c4;
-    
+
+    /* Fundo com imagem */
+    background: url("./assets/fundo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
 }
+
+/* Camada translúcida sobre o fundo (melhora legibilidade) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* branco suave translúcido */
+    z-index: -1;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -28,6 +45,7 @@ html {
     padding: 8px 20px;
     font-size: 14px;
 }
+
 .top-bar .social a {
     margin-left: 15px;
     text-decoration: none;
@@ -56,26 +74,30 @@ html {
     gap: 20px;
     list-style: none;
 }
+
 .list-nav li {
-    position: relative; /* necessário pro submenu */
+    position: relative;
 }
+
 .list-nav a {
     color: white;
     text-decoration: none;
     padding: 8px 12px;
     display: block;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
+
 .list-nav a:hover {
     background: #fac7dc;
     border-radius: 5px;
 }
 
-/* Submenu sobreposto */
+/* Submenu */
 .submenu {
     display: none;
     position: absolute;
-    top: 100%; /* logo abaixo do item principal */
+    top: 100%;
     left: 0;
     background: rgba(123, 46, 123, 0.95);
     list-style: none;
@@ -86,20 +108,22 @@ html {
     box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     z-index: 2000;
 
-    /* animação */
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
+
 .submenu li a {
     padding: 12px 15px;
     color: white;
     display: block;
     text-decoration: none;
 }
+
 .submenu li a:hover {
     background: #a538a8;
 }
+
 /* Mostrar submenu */
 .list-nav li:hover .submenu {
     display: block;
@@ -107,56 +131,36 @@ html {
     transform: translateY(0);
 }
 
-/* Botão hamburguer */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
-}
-
 /* Banner */
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    place-self: center;
     height: 100vh;
     background-image: url("./assets/Paroquia.jpg");
     background-size: cover;
     background-position: center;
-    width: 100%;
     filter: brightness(70%);
-}
-
-.text-header strong{
-    color: #ff66c4;
-}
-
-.p1{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 30px;
 }
 
 .text-header {
     color: white;
     z-index: 2;
 }
+
+.text-header strong {
+    color: #ff66c4;
+}
+
 .text-header h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    border-bottom: 2px solid white ;
+    border-bottom: 2px solid white;
     display: inline-block;
     padding-bottom: 5px;
 }
+
 .text-header h1 {
     font-size: 60px;
     font-weight: 800;
@@ -165,6 +169,7 @@ html {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+
 .button a {
     text-decoration: none;
     font-size: 18px;
@@ -175,6 +180,7 @@ html {
     border-radius: 30px;
     transition: 0.3s;
 }
+
 .button a:hover {
     background-color: white;
     color: #a538a8;
@@ -182,35 +188,29 @@ html {
 
 /* Seções */
 section {
-    padding: 80px 0px;
-    ;
+    padding: 80px 20px;
 }
+
 section h2 {
     font-size: 32px;
     color: #ff66c4;
     margin-bottom: 20px;
     text-align: center;
 }
+
 section p {
     text-align: center;
     font-size: 18px;
+    line-height: 1.6;
+    color: #ff66c4;
 }
 
-/* Rodapé */
-footer {
-    background-color: #a538a8;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* Section Nossa Padroeira */
+/* Container de imagem + texto */
 .imagem-container {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap; /* no celular, quebra para ficar um embaixo do outro */
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
@@ -219,7 +219,7 @@ footer {
     max-width: 200px;
     height: auto;
     border-radius: 10px;
-    box-shadow: #ff66c4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .imagem-container p {
@@ -230,22 +230,73 @@ footer {
     color: #ff66c4;
 }
 
+/* Pastorais */
+.pastorais-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.pastoral {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.pastoral.reverse {
+  flex-direction: row-reverse;
+}
+
+.pastoral-img img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.pastoral-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.pastoral-text h2 {
+  margin-bottom: 15px;
+  color: #ff66c4;
+}
+
+/* Seção inscrição */
+.inscricao {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.inscricao a {
+  color: #ff66c4;
+  font-weight: bold;
+}
+
+/* Conteúdo principal */
+.p1 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .nav-bar{
-        display: flex;
+    .nav-bar {
+        flex-direction: row;
         justify-content: space-between;
     }
 
-    .menu-toggle{
+    .menu-toggle {
         display: flex;
     }
 
     .menu-toggle img {
         width: 30px;
         height: 30px;
-    }   
+    }
 
     .list-nav {
         display: none;
@@ -258,16 +309,37 @@ footer {
         padding: 15px;
         border-radius: 8px;
     }
+
     .list-nav.active {
         display: flex;
     }
+
     .list-nav li:hover .submenu {
-        position: relative; /* no mobile, submenu abre dentro da caixa */
+        position: relative;
         top: 0;
         left: 0;
         box-shadow: none;
     }
+
     .text-header h1 {
         font-size: 40px;
     }
+
+    .imagem-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagem-container p {
+        text-align: justify;
+    }
+
+     .pastoral, .pastoral.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pastoral-text {
+    text-align: center;
+  }
 }
