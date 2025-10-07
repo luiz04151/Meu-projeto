@@ -5,21 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grupos e Movimentos - Paróquia Santa Teresinha</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    place-self: center;
-    height: 100vh;
-    background-image: url("./assets/EJC.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    filter: brightness(70%);
-}
-  </style>
+  
 </head>
 <body>
 
@@ -37,10 +23,10 @@
   <!-- Menu -->
   <nav class="nav-bar">
     <div class="logo">
-      <img src="./assets/Logo1.png" alt="Logo da Igreja">
+      <img src="./assets/logo.png" alt="Logo da Igreja">
     </div>
     <div class="menu-toggle" id="menu-toggle">
-      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="">
+      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="Menu">
     </div>
     <ul class="list-nav" id="menu">
       <li><a href="index.html">Início</a></li>
@@ -53,48 +39,89 @@
   </nav>
 
   <!-- Banner menor -->
-  <header class="header" style="height: 50vh;">
+  <header class="header" style="height: 100vh; background-image: url('./assets/grupo.jpg');">
     <div class="text-header">
       <h1>Grupos e Movimentos</h1>
       <div class="button">
-                <a href="#inscricao">Venha fazer parte da nossa família</a>
-            </div>
+        <a href="#inscricao">Venha viver a fé em comunidade</a>
+      </div>
     </div>
   </header>
 
-  <!-- Conteúdo das pastorais -->
+  <!-- Conteúdo -->
   <main class="p1">
-    <section id="EJC">
-      <h2>Encontro de Jovens com Cristo(EJC)</h2>
-      <p>O EJC tem como motivação única levar Cristo aos jovens, dando a eles oportunidade de verem e sentirem o mundo sob o prisma do amor de Deus.<br>
-O Encontro de Jovens com Cristo não se resume nas atividades de três dias, pois o importante é o jovem querer viver e agir como Jesus propôs aos seus seguidores. O EJC é uma atividade cuja dinâmica se inicia meses antes do Encontro e se estende, através do Pós-Encontro, até o engajamento total do jovem em uma comunidade cristã.
-Por meio do EJC o jovem deve compreender a necessidade de valores absolutos e de um Ser Supremo que está por trás desses valores. E, assim compreendendo, encontrar Cristo e, através Dele, ver e alcançar a Deus. É o encontro da juventude com a Fé e a Igreja de Cristo. Essa compreensão da natureza e das conseqüências do EJC é o caminho através do qual os propósitos do EJC podem ser estabelecidos. Como instrumento da Igreja, o EJC tem uma missão evangelizadora. Como forma de propiciar o encontro do jovem consigo mesmo, com o próximo e com Deus, o EJC tem uma missão de conversão.</p>
+
+    <section id="Ejc" class="pastoral">
+      <div class="pastoral-img">
+        <div class="imagem-container">
+        <img src="./assets/logo2.png" alt="Logo do Ejc">
+      </div>
+      </div>
+      <div class="pastoral-text">
+      <h2>Encontro de Jovens com Cristo (EJC)</h2>
+      
+      <p>
+O Encontro de Jovens com Cristo (EJC) busca levar os jovens a uma vivência profunda com Deus, ajudando-os a enxergar o mundo sob o amor de Cristo. Mais do que um evento de três dias, o EJC é um processo contínuo que começa antes do encontro e se estende após ele, incentivando o engajamento na comunidade cristã. Sua missão é evangelizar, promover a conversão e conduzir o jovem a um verdadeiro encontro consigo mesmo, com o próximo e com Deus.</p>
+     </div>
     </section>
 
-    <section id="ECC">
-      <h2>Encontro de Casais com Cristo(ECC)</h2>
-      <p></p>
+    <section id="Ecc" class="pastoral reverse">
+      <div class="pastoral-img">
+        <div class="imagem-container">
+        <img src="./assets/logo3.jpeg" alt="Logo do Ecc">
+      </div>
+      </div>
+      <div class="pastoral-text">
+      <h2>Encontro de Casais com Cristo (ECC)</h2>
+      <p>O Encontro de Casais com Cristo (ECC) é um movimento da Igreja Católica que busca fortalecer os laços matrimoniais e promover o encontro do casal com Jesus. Por meio de um retiro de três dias, oferece momentos de reflexão, oração e partilha sobre temas como comunicação, perdão, espiritualidade e vida familiar. Conduzido por casais experientes, o ECC incentiva o diálogo e a renovação do compromisso conjugal. Após o retiro, o movimento mantém atividades de acompanhamento, como encontros e grupos de estudo, ajudando os casais a viver os valores cristãos no dia a dia.</p>
+      </div>
     </section>
 
-    <section id="RCC">
-      <h2>Renovação Carismatica Católica(RCC)</h2>
-      <p></p>
+    <section id="rcc" class="pastoral">
+      <div class="pastoral-img">
+        <div class="imagem-container">
+        <img src="./assets/rcc.jpg" alt="Logo do rcc">
+      </div>
+      </div>
+      <div class="pastoral-text">
+      <h2>Renovação Carismática Católica (RCC)</h2>
+      <p>A Renovação Carismática Católica (RCC) é um movimento da Igreja que busca uma vivência mais profunda da fé por meio da ação do Espírito Santo. Valoriza os carismas, como profecia, cura, línguas e sabedoria, vistos como dons concedidos para fortalecer a Igreja e evangelizar. A RCC enfatiza a experiência pessoal com Deus, incentivando oração, louvor e abertura à atuação do Espírito Santo na vida cotidiana. Seu objetivo é renovar a vida cristã, promover a unidade e a missão evangelizadora nas comunidades, tornando a fé mais viva, participativa e transformadora.</p>
+      </div>
     </section>
 
-    <section>
-        <h2>Mães que Oram Pelos Filhos</h2>
+    <section id="maes" class="pastoral reverse">
+      <div class="pastoral-img">
+        <div class="imagem-container">
+        <img src="./assets/maes.png" alt="Logo de maes que oram pelos filhos">
+      </div>
+      </div>
+      <div class="pastoral-text">
+      <h2>Mães que Oram pelos Filhos</h2>
+      <p>O movimento Mães que Oram pelos Filhos tem a missão de formar um exército de mães em oração pela salvação e restauração das famílias. A partir da própria transformação espiritual das mães, elas passam a evangelizar seus lares, levando maridos e filhos de volta à Igreja. Esse processo incentiva a vivência dos sacramentos e a regularização da vida matrimonial conforme a doutrina cristã. Ao experimentarem as graças de Deus, essas mães tornam-se testemunhas de fé, compartilhando seu exemplo em seus círculos familiares, sociais e profissionais.</p>
+      </div>
     </section>
 
-    <section>
-        <h2>Terço dos Homens</h2>
-    </section>
-
-    <section>
-        <h2>Apostolado do Imac. Coração de Maria</h2>
-    </section>
-
-
+    <section id="terço" class="pastoral">
+      <div class="pastoral-img">
+        <div class="imagem-container">
+        <img src="./assets/homens.jpg" alt="Logo de terço dos homens">
+      </div>
+      </div>
+      <div class="pastoral-text">
+      <h2>Terço dos Homens</h2>
+      <p>O Terço dos Homens é um movimento de fé e devoção mariana que busca fortalecer a vida espiritual dos homens e de suas famílias por meio da oração do rosário. Inspirado por Nossa Senhora, o movimento promove a evangelização, a paz e a unidade, convidando os participantes a servirem com responsabilidade e espírito comunitário. A oração do terço é vista como uma poderosa arma espiritual contra o mal e um meio de transformar vidas. Sua missão é resgatar homens para a Igreja, valorizando sua presença na formação das famílias e na construção de uma sociedade cristã.
+      </p>
+      </div>
   
+    </section>
+
+    <section id="inscricao">
+      <h2>Inscrição</h2>
+      <p>Você pode se inscrever presencialmente na Paróquia Santa Teresinha, ou diretamente pelo nosso <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>.</p>
+    </section>
+
+  </main>
+
   <!-- Script menu -->
   <script>
     const toggle = document.getElementById("menu-toggle");
