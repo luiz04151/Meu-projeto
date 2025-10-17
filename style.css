@@ -140,19 +140,7 @@ html {
     justify-content: center;
     text-align: center;
     height: 100vh;
-    background-image: url("./assets/Paroquia.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(70%);
-}
-/*Agenda */
-.header {
-     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    background-image: url("https://github.com/luiz04151/Meu-projeto/blob/main/assets/60af9aa7-44e9-4149-884e-7c67c0744dfc.jpg?raw=true");
+    background-image: url("./assets/agenda.png");
     background-size: cover;
     background-position: center;
     filter: brightness(70%);
@@ -216,7 +204,7 @@ section p {
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
-    color: #ff66c4;
+    color: #5a2a5a;
 }
 
 /* Container de imagem + texto */
@@ -241,7 +229,7 @@ section p {
     text-align: justify;
     font-size: 18px;
     line-height: 1.6;
-    color: #ff66c4;
+    color: #5a2a5a;
 }
 
 /* Pastorais */
@@ -356,4 +344,42 @@ section p {
   .pastoral-text {
     text-align: center;
   }
+
+}
+
+/* Seção de horários (Agenda) */
+.centralizado {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.centralizado p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5a2a5a;
+  margin-top: 20px;
+}
+
+.centralizado ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px 0;
+}
+
+.centralizado li {
+  display: inline-block;
+  background: #ff66c4;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.centralizado li:hover {
+  transform: scale(1.05);
+  background: #ff85cf;
 }
