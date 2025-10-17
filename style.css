@@ -145,6 +145,18 @@ html {
     background-position: center;
     filter: brightness(70%);
 }
+/*Agenda */
+.header {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url("https://github.com/luiz04151/Meu-projeto/blob/main/assets/desktop-wallpaper-agenda.jpg?raw=true");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+}
 
 .text-header {
     color: white;
@@ -254,6 +266,9 @@ section p {
   max-width: 200px;
   border-radius: 10px;
 }
+
+/* Agenda */
+
 
 .pastoral-text {
   flex: 1;
