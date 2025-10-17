@@ -1,6 +1,81 @@
+
 <!DOCTYPE html>
-<head></head>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastorais - Paróquia Santa Teresinha</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
 <body>
-    Em desenvolvimento..
+
+  <!-- Topo -->
+  <div class="top-bar">
+    <p></p>
+    <div class="social">
+      <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>
+      <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
+      <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
+      <a href="desevolvimento.html">Podcast</a>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="C:\Users\Mathe\Downloads\depositphotos_47266899-stock-photo-agenda-with-pencil-displays-written.jpg" alt="Logo da Igreja">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <img src="C:\Users\Mathe\Downloads\depositphotos_47266899-stock-photo-agenda-with-pencil-displays-written.jpg" alt="menu">
+    </div>
+
+    <ul class="list-nav" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="pastorais.html" class="active">Pastorais</a></li>
+      <li><a href="grupo.html">Grupos</a></li>
+      <li><a href="desevolvimento.html">Doação</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="desevolvimento.html">Destaques</a></li>
+    </ul>
+  </nav>
+
+
+ <!-- Banner menor -->
+  <header class="header" style="height: 100vh; background-image: url('./assets/cordeiro de Deus.jpg');">
+    <div class="text-header">
+      <h1>Agenda</h1>
+      <div class="button">
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo da Agenda -->
+  <main class="p1 agenda-container">
+
+    
+
+    <section id="liturgia" class="pastoral reverse">
+      <div class="pastoral-img">
+        <div class="imagem-container">
+        <img src="C:\Users\Mathe\Downloads\desktop-wallpaper-agenda.jpg" alt="Logo da Agenda">
+      </div>
+      </div>
+      <div class="pastoral-text">
+        <h2>Horários da Manhã 7:00 9:00 11:00</h2>
+        <h2>Horários da Noite 19:00</h2>
+      </div>
+    </section>
+
+
+  <!-- Script do menu -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
