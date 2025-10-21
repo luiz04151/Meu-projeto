@@ -140,7 +140,7 @@ html {
     justify-content: center;
     text-align: center;
     height: 100vh;
-    background-image: url("./assets/paroquia.png");
+    background-image: url("./assets/Paroquia.jpg");
     background-size: cover;
     background-position: center;
     filter: brightness(70%);
@@ -391,3 +391,4 @@ section p {
   transform: scale(1.05);
   background: #ff85cf;
 }
+
