@@ -1,20 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
 body {
     font-family: 'Arial', Helvetica, sans-serif;
     line-height: 1.6;
     color: #ff66c4;
-
-    /* Fundo com imagem */
-    background: url("./assets/fundo.jpg") no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Camada translúcida sobre o fundo (melhora legibilidade) */
@@ -391,5 +381,3 @@ section p {
   transform: scale(1.05);
   background: #ff85cf;
 }
-
-
