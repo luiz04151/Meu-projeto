@@ -7,7 +7,15 @@ body {
     box-sizing: border-box;
 }
 
+
 /* Camada translúcida sobre o fundo (melhora legibilidade) */
+body{
+    background: url("./assets/santissimo.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
 body::before {
     content: "";
     position: fixed;
