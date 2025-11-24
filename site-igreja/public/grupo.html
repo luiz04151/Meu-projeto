@@ -1,144 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grupos e Movimentos - Paróquia Santa Teresinha</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body{
-   background: url("./assets/fundo3.jpeg") no-repeat center center fixed;
-   background-size: cover;
-   position: relative;
-}
-    
-    </style>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos e Serviços - Paróquia Santa Teresinha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Topo -->
-  <div class="top-bar">
-    <p></p>
-    <div class="social">
-      <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>
-      <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
-      <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
-      <a href="desevolvimento.html">Podcast</a>
-    </div>
-  </div>
+    <!-- ================= HEADER ================= -->
+    <header style="padding: 20px; background: #C7A249; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Logo da Igreja" style="height: 60px;">
+            </div>
 
-  <!-- Menu -->
-  <nav class="nav-bar">
-    <div class="logo">
-      <img src="./assets/logo.png" alt="Logo da Igreja">
-    </div>
-    <div class="menu-toggle" id="menu-toggle">
-      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="Menu">
-    </div>
-    <ul class="list-nav" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="pastorais.html">Pastorais</a></li>
-      <li><a href="grupo.html" class="active">Grupos</a></li>
-      <li><a href="doacao.html">Doação</a></li>
-      <li><a href="agenda.html">Agenda</a></li>
-      <li><a href="destaques.html">Destaques</a></li>
-    </ul>
-  </nav>
+            <a href="index.html"
+               style="padding: 10px 18px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                Voltar ao Início
+            </a>
+        </div>
 
-  <!-- Banner menor -->
-  <header class="header" style="height: 60vh; background-image: url('./assets/grupo.jpg');">
-    <div class="text-header">
-      <h1>Grupos e Movimentos</h1>
-      <!--<div class="button">
-        <a href="#inscricao">Venha viver a fé em comunidade</a>
-      </div>-->
-    </div>
-  </header>
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="./assets/icons8-menu-hambúrguer-50.png" alt="botao">
+        </div>
 
-  <!-- Conteúdo -->
-  <main class="p1">
+        <ul class="list-nav" id="menu">
+            <a href="pastorais.html"><strong>Pastorais</strong></a>
+            <a href="index.html#igreja"><strong>Igreja</strong></a>
+            <a href="index.html#Padres"><strong>Padres</strong></a>
+            <a href="index.html#contato"><strong>Contatos</strong></a>
+        </ul>
+    </header>
 
-    <section id="Ejc" class="pastoral">
-      <div class="pastoral-img">
-        <div class="imagem-container">
-        <img src="./assets/logo2.png" alt="Logo do Ejc">
-      </div>
-      </div>
-      <div class="pastoral-text">
-      <h2>Encontro de Jovens com Cristo (EJC)</h2>
-      
-      <p>
-O Encontro de Jovens com Cristo (EJC) busca levar os jovens a uma vivência profunda com Deus, ajudando-os a enxergar o mundo sob o amor de Cristo. Mais do que um evento de três dias, o EJC é um processo contínuo que começa antes do encontro e se estende após ele, incentivando o engajamento na comunidade cristã. Sua missão é evangelizar, promover a conversão e conduzir o jovem a um verdadeiro encontro consigo mesmo, com o próximo e com Deus.</p>
-     </div>
+
+    <!-- ================= HERO ================= -->
+    <section id="inicio" style="padding: 80px 20px; text-align: center; background-image: url('./assets/foto3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.7);">
+        <div class="text-header">
+            <h1>Grupos e Serviços</h1>
+            <h3>Ações, ministérios e dons a serviço da comunidade</h3>
+        </div>
     </section>
 
-    <section id="Ecc" class="pastoral reverse">
-      <div class="pastoral-img">
-        <div class="imagem-container">
-        <img src="./assets/logo3.jpeg" alt="Logo do Ecc">
-      </div>
-      </div>
-      <div class="pastoral-text">
-      <h2>Encontro de Casais com Cristo (ECC)</h2>
-      <p>O Encontro de Casais com Cristo (ECC) é um movimento da Igreja Católica que busca fortalecer os laços matrimoniais e promover o encontro do casal com Jesus. Por meio de um retiro de três dias, oferece momentos de reflexão, oração e partilha sobre temas como comunicação, perdão, espiritualidade e vida familiar. Conduzido por casais experientes, o ECC incentiva o diálogo e a renovação do compromisso conjugal. Após o retiro, o movimento mantém atividades de acompanhamento, como encontros e grupos de estudo, ajudando os casais a viver os valores cristãos no dia a dia.</p>
-      </div>
+
+    <!-- ================= GRUPOS E SERVIÇOS ================= -->
+    <section style="padding: 60px 20px; max-width: 1000px; margin: auto;">
+        <h2 style="text-align:center;">Nossos Serviços</h2>
+        <p style="text-align:center; max-width:700px; margin:auto;">
+            Conheça os principais grupos,  serviços e ministérios que contribuem para a vida comunitária e espiritual da Paróquia Santa Teresinha.
+        </p>
+
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 40px; justify-content: center;">
+
+            <div style="border: 1px solid #ccc; padding: 20px; width: 280px; background:#fafafa; border-radius:10px;">
+                <img src="./assets/logo2.png" alt="Grupo" style="width: 100%; height: 180px; object-fit: cover; border-radius:8px;">
+                <h3>Encontro de Jovens com cristo</h3>
+                <p>O EJC é um processo de evangelização que promove a conversão do jovem, levando-o a um encontro pessoal e profundo com Deus, incentivando seu engajamento na vida da Igreja.</p>
+            </div>
+
+            <div style="border: 1px solid #ccc; padding: 20px; width: 280px; background:#fafafa; border-radius:10px;">
+                <img src="./assets/logo3.jpeg" alt="Grupo" style="width: 100%; height: 180px; object-fit: cover; border-radius:8px;">
+                <h3>Encontro de Casais com Cristo</h3>
+                <p>O ECC é um retiro para casais que busca renovar o diálogo e o compromisso conjugal, fortalecendo a espiritualidade do casal e sua vida em família, com o apoio contínuo da comunidade.</p>
+            </div>
+
+            <div style="border: 1px solid #ccc; padding: 20px; width: 280px; background:#fafafa; border-radius:10px;">
+                <img src="./assets/rcc.jpg" alt="Grupo" style="width: 100%; height: 180px; object-fit: cover; border-radius:8px;">
+                <h3>Renovação Carismática Católica</h3>
+                <p>A RCC é um movimento que enfatiza a experiência pessoal e carismática com o Espírito Santo, utilizando o louvor e os dons para renovar a fé e evangelizar ativamente na Igreja.</p>
+            </div>
+
+            <div style="border: 1px solid #ccc; padding: 20px; width: 280px; background:#fafafa; border-radius:10px;">
+                <img src="./assets/maes.png" alt="Grupo" style="width: 100%; height: 180px; object-fit: cover; border-radius:8px;">
+                <h3>Mães que oram pelos filhos</h3>
+                <p>É um movimento de oração materna focado na transformação espiritual da mãe, que se torna o canal de evangelização para restaurar a fé e os valores cristãos em sua família.</p>
+            </div>
+
+            <div style="border: 1px solid #ccc; padding: 20px; width: 280px; background:#fafafa; border-radius:10px;">
+                <img src="./assets/homens.jpg" alt="Grupo" style="width: 100%; height: 180px; object-fit: cover; border-radius:8px;">
+                <h3>Terço dos Homens</h3>
+                <p>É um movimento que reúne homens para rezar o terço, fortalecendo sua fé, sua família e seu papel na Igreja e na sociedade.</p>
+            </div>
+
+            
+        </div>
     </section>
 
-    <section id="rcc" class="pastoral">
-      <div class="pastoral-img">
-        <div class="imagem-container">
-        <img src="./assets/rcc.jpg" alt="Logo do rcc">
-      </div>
-      </div>
-      <div class="pastoral-text">
-      <h2>Renovação Carismática Católica (RCC)</h2>
-      <p>A Renovação Carismática Católica (RCC) é um movimento da Igreja que busca uma vivência mais profunda da fé por meio da ação do Espírito Santo. Valoriza os carismas, como profecia, cura, línguas e sabedoria, vistos como dons concedidos para fortalecer a Igreja e evangelizar. A RCC enfatiza a experiência pessoal com Deus, incentivando oração, louvor e abertura à atuação do Espírito Santo na vida cotidiana. Seu objetivo é renovar a vida cristã, promover a unidade e a missão evangelizadora nas comunidades, tornando a fé mais viva, participativa e transformadora.</p>
-      </div>
+
+    <!-- ================= FRASE FINAL ================= -->
+    <section style="padding: 60px 20px; background: #f2f2f2; text-align: center;">
+        <h2>Unidos para Servir</h2>
+        <p>
+            Cada grupo e serviço é um dom para nossa paróquia, fortalecendo a fé e a união entre irmãos.
+        </p>
     </section>
 
-    <section id="maes" class="pastoral reverse">
-      <div class="pastoral-img">
-        <div class="imagem-container">
-        <img src="./assets/maes.png" alt="Logo de maes que oram pelos filhos">
-      </div>
-      </div>
-      <div class="pastoral-text">
-      <h2>Mães que Oram pelos Filhos</h2>
-      <p>O movimento Mães que Oram pelos Filhos tem a missão de formar um exército de mães em oração pela salvação e restauração das famílias. A partir da própria transformação espiritual das mães, elas passam a evangelizar seus lares, levando maridos e filhos de volta à Igreja. Esse processo incentiva a vivência dos sacramentos e a regularização da vida matrimonial conforme a doutrina cristã. Ao experimentarem as graças de Deus, essas mães tornam-se testemunhas de fé, compartilhando seu exemplo em seus círculos familiares, sociais e profissionais.</p>
-      </div>
-    </section>
 
-    <section id="terço" class="pastoral">
-      <div class="pastoral-img">
-        <div class="imagem-container">
-        <img src="./assets/homens.jpg" alt="Logo de terço dos homens">
-      </div>
-      </div>
-      <div class="pastoral-text">
-      <h2>Terço dos Homens</h2>
-      <p>O Terço dos Homens é um movimento de fé e devoção mariana que busca fortalecer a vida espiritual dos homens e de suas famílias por meio da oração do rosário. Inspirado por Nossa Senhora, o movimento promove a evangelização, a paz e a unidade, convidando os participantes a servirem com responsabilidade e espírito comunitário. A oração do terço é vista como uma poderosa arma espiritual contra o mal e um meio de transformar vidas. Sua missão é resgatar homens para a Igreja, valorizando sua presença na formação das famílias e na construção de uma sociedade cristã.
-      </p>
-      </div>
-  
-    </section>
+    <!-- Script do menu -->
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
 
-    <section id="inscricao">
-      <h2>Inscrição</h2>
-      <p>Você pode se inscrever presencialmente na Paróquia Santa Teresinha, ou diretamente pelo nosso <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>.</p>
-    </section>
-
-  </main>
-
-  <!-- Script menu -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-  </script>
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>

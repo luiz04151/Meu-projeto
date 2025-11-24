@@ -1,31 +1,11 @@
 body {
     font-family: 'Arial', Helvetica, sans-serif;
     line-height: 1.6;
-    color: #ff66c4;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* Camada translúcida sobre o fundo (melhora legibilidade) */
-body{
-    background: url("./assets/santissimo.png");
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7); /* branco suave translúcido */
-    z-index: -1;
-}
 
 html {
     scroll-behavior: smooth;
@@ -35,30 +15,13 @@ html {
     display: none;
 }
 
-/* Topo */
-.top-bar {
-    background-color: white;
-    color: #cfa0b2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 20px;
-    font-size: 14px;
-}
-
-.top-bar .social a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #ff66c4;
-    font-weight: bold;
-}
 
 /* Menu */
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #ff66c4;
+    background: #C7A249;
     padding: 10px 20px;
     position: relative;
     z-index: 1000;
@@ -80,7 +43,7 @@ html {
 }
 
 .list-nav a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 8px 12px;
     display: block;
@@ -89,64 +52,15 @@ html {
 }
 
 .list-nav a:hover {
-    background: #fac7dc;
+    background: #CFCD7A;
     border-radius: 5px;
 }
 
-/* Submenu */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(123, 46, 123, 0.95);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: 180px;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    z-index: 2000;
 
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-}
-
-.submenu li a {
-    padding: 12px 15px;
-    color: white;
-    display: block;
-    text-decoration: none;
-}
-
-.submenu li a:hover {
-    background: #a538a8;
-}
-
-/* Mostrar submenu */
-.list-nav li:hover .submenu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Banner */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    background-image: url("./assets/paroquia.png");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(70%);
-}
 
 .text-header {
-    color: white;
-    z-index: 2;
+    color: #FFFFFF;
+    font-size: 24px; 
 }
 
 .text-header strong {
@@ -154,47 +68,31 @@ html {
 }
 
 .text-header h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 19px;
+    margin-bottom: 2px;
     border-bottom: 2px solid white;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
+    color: #FFFFFF;
 }
 
-.text-header h1 {
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 60px;
-    margin-bottom: 25px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-
-.button a {
-    text-decoration: none;
-    font-size: 18px;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.button a:hover {
-    background-color: white;
-    color: #a538a8;
-}
 
 /* Seções */
 section {
     padding: 80px 20px;
 }
 
+
+
 section h2 {
     font-size: 32px;
-    color: #ff66c4;
+    color: #000;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+section h3 {
+    color: #000;
     text-align: center;
 }
 
@@ -202,85 +100,15 @@ section p {
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
-    color: #5a2a5a;
-}
-
-/* Container de imagem + texto */
-.imagem-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.imagem-container img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.imagem-container p {
-    flex: 1;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #5a2a5a;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #000;
 }
 
 
-
-/* Pastorais */
-.pastorais-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
+.container-escuro h3 {
+    color: #FFFFFF; 
+    z-index: 2;
 }
 
-.pastoral {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.pastoral.reverse {
-  flex-direction: row-reverse;
-}
-
-.pastoral-img img {
-  max-width: 200px;
-  border-radius: 10px;
-}
-
-.pastoral-text {
-  flex: 1;
-  text-align: justify;
-}
-
-.pastoral-text h2 {
-  margin-bottom: 15px;
-  color: #ff66c4;
-}
-
-/* Seção inscrição */
-.inscricao {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.inscricao a {
-  color: #ff66c4;
-  font-weight: bold;
-}
 
 /* Conteúdo principal */
 .p1 {
@@ -313,7 +141,7 @@ section p {
         position: absolute;
         top: 60px;
         right: 20px;
-        background: #ff66c4;
+        background: #C7A249;
         padding: 15px;
         border-radius: 8px;
     }
@@ -343,49 +171,75 @@ section p {
     }
 
      .pastoral, .pastoral.reverse {
-    flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pastoral-text {
+        text-align: center;
+    }
+
+}
+
+/* ---------- GALERIA / CARROSSEL ---------- */
+
+.carrossel-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.carrossel-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+/* ---------- EVENTOS ---------- */
+
+.eventos-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.evento-card {
+    background: white;
+    width: 260px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     text-align: center;
-  }
+}
 
-  .pastoral-text {
+.evento-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+/* ---------- GRUPOS / DIFERENCIAIS ---------- */
+
+.grupos-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.grupo-card {
+    background: white;
+    width: 260px;
+    padding: 25px;
     text-align: center;
-  }
-
-}
-
-/* Seção de horários (Agenda) */
-.centralizado {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.centralizado p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #5a2a5a;
-  margin-top: 20px;
-}
-
-.centralizado ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 20px 0;
-}
-
-.centralizado li {
-  display: inline-block;
-  background: #5a2a5a;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  margin: 6px;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
-}
-
-.centralizado li:hover {
-  transform: scale(1.05);
-  background: #ff85cf;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }

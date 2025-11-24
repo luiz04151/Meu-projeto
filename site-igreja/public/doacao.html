@@ -1,90 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doação - Paróquia Santa Teresinha</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body{
-   background: url("./assets/fundo5.jpeg") no-repeat center center fixed;
-   background-size: cover;
-   position: relative;  
-}
-    
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dízimos e Doações - Paróquia Santa Teresinha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Topo -->
-  <div class="top-bar">
-    <p></p>
-    <div class="social">
-      <a href="https://api.whatsapp.com/send/?phone=5586988779778">WhatsApp</a>
-      <a href="https://www.youtube.com/channel/UCJmVEF-RM_vcmKO90cU2nsw">YouTube</a>
-      <a href="https://www.instagram.com/paroquiasantateresinhadirceu/">Instagram</a>
-      <a href="desevolvimento.html">Podcast</a>
-    </div>
-  </div>
+    <!-- ================= HEADER ================= -->
+    <header style="padding: 20px; background: #C7A249; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Logo da Igreja" style="height: 60px;">
+            </div>
 
-  <!-- Menu -->
-  <nav class="nav-bar">
-    <div class="logo">
-      <img src="./assets/logo.png" alt="Logo da Igreja">
-    </div>
-    <div class="menu-toggle" id="menu-toggle">
-      <img src="./assets/icons8-menu-hambúrguer-50.png" alt="Menu">
-    </div>
-    <ul class="list-nav" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="pastorais.html">Pastorais</a></li>
-      <li><a href="grupo.html">Grupos</a></li>
-      <li><a href="doacao.html" class="active">Doação</a></li>
-      <li><a href="agenda.html">Agenda</a></li>
-      <li><a href="destaques.html" >Destaques</a></li>
-    </ul>
-  </nav>
+            
+        </div>
 
-  <!-- Banner -->
-  <header class="header" style="height: 60vh; background-image: url('./assets/doação.jpg');">
-    <div class="text-header">
-      <h1>Doação</h1>
-      <!--<div class="button">
-        <a href="#galeria">Reviva os momentos que florescem o nosso coração</a>
-      </div>-->
-    </div>
-  </header>
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="./assets/icons8-menu-hambúrguer-50.png" alt="botao">
+        </div>
 
-  <!-- Conteúdo principal -->
-  <main class="p1">
+        <ul class="list-nav" id="menu">
+            <a href="texte.html"><strong>Início</strong></a>
+            <a href="pastorais.html"><strong>Pastorais</strong></a>
+            <a href="grupo.html"><strong>Grupos</strong></a>
+            
+        </ul>
+    </header>
 
-   <section id="doacao">
-    <h2>Dizimo via Pix</h2>
-    <p>Contribua com nossa paróquia através do Pix. Sua doação é fundamental para continuarmos nosso trabalho e missão.
-    </p>
-    <br>
-   
-   
-    <div class="flex-container">
-    <img src="./assets/PapelDizimo.png" alt="QR Code para Doação via Pix" style="width:800px;  height:500px;">
-    </div>
-    <br>
-     <p>Ao realizar sua doação, por favor, envie o comprovante para a <a href="https://api.whatsapp.com/send/?phone=5586988779778">secretária</a>.</p>
-    <p>Obrigado por fazer parte da nossa comunidade!</p>
-   </section>
 
-  </main>
+    <!-- ================= HERO ================= -->
+    <section id="inicio"  style="padding: 80px 20px; text-align: center; background-image: url('./assets/doação.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.7);">
+        <div class="text-header">
+            <h1>Dízimos e Ofertas</h1>
+            <h3>Contribua com a missão da Paróquia Santa Teresinha</h3>
+        </div>
+    </section>
 
-  <!-- Script menu -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
 
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-  </script>
+    <!-- ================= FORMAS DE DOAÇÃO ================= -->
+    <section style="padding: 60px 20px; max-width: 800px; margin: auto; text-align: center;">
+        <h2>Como Contribuir</h2>
+        <p>
+            Sua contribuição ajuda a manter nossa igreja, ações sociais, celebrações e toda a estrutura de evangelização.
+            Agradecemos profundamente sua generosidade!
+        </p>
+
+        <div style="margin-top: 40px; text-align: left; background: #f7f7f7; padding: 25px; border-radius: 10px; border: 1px solid #ddd;">
+            <h3><strong>Doações via PIX :</strong></h3>
+            <p>86 98877-9778</p>
+
+            <h3 style="margin-top: 25px;"><strong> Oferta / Depósito via CNPJ:</strong></h3>
+            <p>CNPJ: 06.516.967/0036-37</p>
+
+            <h3 style="margin-top: 25px;"><strong> Dúvidas ou Comprovantes:</strong></h3>
+            <p>Enviar para o WhatsApp oficial da secretaria paroquial:</p>
+            <p><a href="https://api.whatsapp.com/send/?phone=5586988779778">(86) 9 98877-9778</a></p>
+        </div>
+    </section>
+
+
+    <!-- ================= AGRADECIMENTO ================= -->
+    <section style="padding: 60px 20px; background: #fafafa; text-align: center;">
+        <h2>Gratidão por sua Generosidade</h2>
+        <p>"Deus ama quem dá com alegria." (2Cor 9,7)</p>
+        <p>
+            Cada contribuição é um gesto de amor que fortalece a fé, a comunidade e a missão da nossa paróquia.
+        </p>
+    </section>
+
+
+    <!-- Script do menu -->
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>

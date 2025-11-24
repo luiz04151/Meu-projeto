@@ -6,7 +6,7 @@ interface Pessoa {
   nome: string;
   email: string;
   endereco: string;
-  rua: string;
+  bairro: string;       // ✔ corrigido
   nascimento: string;
   tipo: string;
 }
@@ -18,12 +18,38 @@ function CadastroPessoas() {
     nome: "",
     email: "",
     endereco: "",
-    rua: "",
+    bairro: "",          // ✔ corrigido
     nascimento: "",
-    tipo: "participante",
+    tipo: "Participante",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  // ------------------------------------
+  //  Função para enviar dados ao PHP
+  // ------------------------------------
+  const salvarNoBanco = async () => {
+    try {
+      const response = await fetch("http://localhost/api/salvar_ejc.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const resultado = await response.json();
+
+      if (resultado.status === "ok") {
+        alert("Salvo no banco de dados!");
+      } else {
+        alert("Erro ao salvar: " + resultado.detalhe);
+      }
+    } catch (error) {
+      console.error("Erro ao salvar no banco:", error);
+      alert("Erro ao conectar com o servidor PHP.");
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
@@ -34,6 +60,10 @@ function CadastroPessoas() {
       return;
     }
 
+    // Primeiro salva no PHP/MySQL
+    salvarNoBanco();
+
+    // Adiciona na tabela interna
     if (form.id === 0) {
       const novo = { ...form, id: pessoas.length + 1 };
       setPessoas([...pessoas, novo]);
@@ -52,9 +82,9 @@ function CadastroPessoas() {
       nome: "",
       email: "",
       endereco: "",
-      rua: "",
+      bairro: "",       // ✔ corrigido
       nascimento: "",
-      tipo: "participante",
+      tipo: "Participante",
     });
   };
 
@@ -117,8 +147,8 @@ function CadastroPessoas() {
             <label className="form-label">Bairro:</label>
             <input
               type="text"
-              name="rua"
-              value={form.rua}
+              name="bairro"                 // ✔ corrigido
+              value={form.bairro}           // ✔ corrigido
               onChange={handleChange}
               className="form-control"
               placeholder="Nome do bairro"

@@ -78,19 +78,19 @@
 }
 
 .grupo-card h2 {
-  color: #ff66c4;
+  color: #007bff;
   margin: 15px 0 10px;
 }
 
 .grupo-card p {
-  color: #5a2a5a;
+  color: #333;
   font-size: 15px;
   margin-bottom: 15px;
 }
 
 .botao {
   display: inline-block;
-  background-color: #ff66c4;
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -100,7 +100,7 @@
 }
 
 .botao:hover {
-  background-color: #d24fa6;
+  background-color: #007bff;
 }
 
 
