@@ -1,52 +1,45 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 const Batismo: React.FC = () => {
   return (
-    <div className="container" style={{ padding: "40px", maxWidth: "900px", margin: "auto" }}>
+    <motion.div
+      className="container max-w-2xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-2xl"
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* TÍTULO E TEXTO */}
+      <motion.section
+        className="mb-10 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <h2 className="text-3xl font-bold text-blue-600 mb-3">Batismo</h2>
 
-      <section style={{ marginBottom: "40px" }}>
-        <h2 style={{ color: "#007bff" }}>Batismo</h2>
-
-        <p style={{ textAlign: "justify", color: "#333" }}>
-          O Batismo é o primeiro e mais importante dos sacramentos. É através dele que recebemos 
-          a graça divina e nos tornamos membros da Igreja de Cristo. O sacramento pode ser recebido 
-          por crianças, jovens e adultos, conforme a preparação adequada.
+        <p className="text-gray-700 text-lg">
+          Informações sobre preparação, documentos e agendamentos serão
+          adicionadas em breve.
         </p>
+      </motion.section>
 
-        <p style={{ textAlign: "justify", color: "#333" }}>
-          Os pais e padrinhos devem participar do <strong>encontro de preparação para o batismo</strong>,
-          que acontece sempre no <strong>último sábado de cada mês</strong>. 
-          As celebrações do batismo são realizadas no <strong>primeiro domingo de cada mês</strong>.
-        </p>
-
-        <p>
-          <strong>Agende o batismo:</strong>{" "}
-          <a
-            href="https://api.whatsapp.com/send/?phone=5586988779778"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Entrar em contato com a secretaria
-          </a>
-        </p>
-      </section>
-
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <a
+      {/* BOTÃO VOLTAR */}
+      <motion.div
+        className="text-center mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <motion.a
           href="/teste.html"
-          style={{
-            backgroundColor: "#007bff",
-            color: "white",
-            padding: "12px 24px",
-            borderRadius: "8px",
-            textDecoration: "none",
-          }}
+          className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold inline-block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
         >
           Voltar ao site principal
-        </a>
-      </div>
-
-    </div>
+        </motion.a>
+      </motion.div>
+    </motion.div>
   );
 };
 

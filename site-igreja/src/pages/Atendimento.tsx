@@ -1,85 +1,102 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 const CentralAtendimento: React.FC = () => {
   return (
-    <div
-      className="container"
-      style={{
-        padding: "40px",
-        maxWidth: "900px",
-        margin: "auto",
-        lineHeight: "1.7",
-      }}
+    <motion.div
+      className="container max-w-2xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-2xl"
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <h1 style={{ textAlign: "center", color: "#007bff", marginBottom: "30px" }}>
+      {/* TÍTULO */}
+      <motion.h1
+        className="text-3xl font-bold text-blue-600 text-center mb-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
         Central de Atendimento – Secretaria Paroquial
-      </h1>
+      </motion.h1>
 
-      <section style={{ marginBottom: "40px" }}>
-        <h3 style={{ color: "#0056b3" }}>📞 Horário de Atendimento</h3>
+      {/* HORÁRIO DE ATENDIMENTO */}
+      <motion.section
+        className="mb-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+          Horário de Atendimento
+        </h3>
 
-        <p style={{ color: "#333" }}>
-          A Secretaria Paroquial está disponível para atendimento presencial e telefônico nos seguintes horários:
+        <p className="text-gray-700 mb-2">
+          A Secretaria Paroquial está disponível para atendimento presencial e
+          pelo WhatsApp nos seguintes horários:
         </p>
 
-        <ul style={{ color: "#333" }}>
-          <li><strong>Segunda a Sexta:</strong> 08h às 12h e 14h às 17h</li>
-          <li><strong>Sábados:</strong> 08h às 12h</li>
+        <ul className="text-gray-700 ml-4">
+          <li className="mb-2">
+            <strong>Segunda a Sexta:</strong> das 14h às 19h
+          </li>
         </ul>
 
-        <p style={{ marginTop: "10px", color: "#333" }}>
-          <strong>Atendimento do Padre:</strong> terças e quintas a partir das 15h.
+        <p className="text-gray-700 mt-4">
+          <strong>Atendimento do Padre:</strong> terças e quintas a partir das
+          15h.
         </p>
-      </section>
+      </motion.section>
 
-      <section style={{ marginBottom: "40px" }}>
-        <h3 style={{ color: "#0056b3" }}>📄 Serviços Disponíveis</h3>
+      {/* CONTATOS */}
+      <motion.section
+        className="mb-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <h3 className="text-2xl font-semibold text-blue-700 mb-4">
+          Contatos da Secretaria
+        </h3>
 
-        <ul style={{ color: "#333" }}>
-          <li>Agendamento de Batismo</li>
-          <li>Agendamento de Casamento</li>
-          <li>Emissão de certidões</li>
-          <li>Inscrições para pastorais e movimentos</li>
-          <li>Informações sobre sacramentos e celebrações</li>
-        </ul>
-      </section>
-
-      <section style={{ marginBottom: "40px" }}>
-        <h3 style={{ color: "#0056b3" }}>📍 Contatos da Secretaria</h3>
-
-        <p><strong>Telefone:</strong> (86) 98877-9778</p>
-
-        <p>
-          <strong>WhatsApp:</strong>{" "}
+        <p className="mb-2">
           <a
             href="https://api.whatsapp.com/send/?phone=5586988779778"
             target="_blank"
-            rel="noopener noreferrer"
+            className="text-blue-600 font-semibold hover:underline"
           >
-            Clique aqui para abrir o WhatsApp
+            WhatsApp
           </a>
+          : (86) 9 98877-9778
         </p>
 
-        <p><strong>E-mail:</strong> secretaria@paroquiasantateresinha.com</p>
+        <p>
+          <a
+            href="https://maps.app.goo.gl/spjC5NR9tYVZF7Ng6"
+            target="_blank"
+            className="text-blue-600 font-semibold hover:underline"
+          >
+            Endereço
+          </a>
+          : Rua José Ebaid, 1047 - Dirceu II
+        </p>
+      </motion.section>
 
-        <p><strong>Endereço:</strong> Av. Exemplo, 123 – Bairro Cidade – Teresina – PI</p>
-      </section>
-
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <a
+      {/* BOTÃO VOLTAR */}
+      <motion.div
+        className="text-center mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.a
           href="/"
-          style={{
-            backgroundColor: "#007bff",
-            color: "white",
-            padding: "12px 24px",
-            borderRadius: "8px",
-            textDecoration: "none",
-          }}
+          className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold inline-block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
         >
           Voltar ao site principal
-        </a>
-      </div>
-    </div>
+        </motion.a>
+      </motion.div>
+    </motion.div>
   );
 };
 

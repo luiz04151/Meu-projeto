@@ -1,53 +1,44 @@
-import React from "react";
-
+import { motion } from "framer-motion";
 
 const Casamento: React.FC = () => {
   return (
-    <div className="container" style={{ padding: "40px", maxWidth: "900px", margin: "auto" }}>
-      
-
-      <section style={{ marginBottom: "40px" }}>
-        <h2 style={{ color: "#007bff" }}> Casamento</h2>
-        <p style={{ textAlign: "justify", color: "#333" }}>
-          O Sacramento do Matrimônio é uma bênção especial concedida por Deus àqueles que decidem
-          unir suas vidas diante Dele. O casamento religioso representa o compromisso de amor, 
-          fidelidade e fé, baseado na presença de Cristo no centro da família.
+    <motion.div
+      className="container max-w-2xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-2xl"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Título */}
+      <motion.section
+        className="mb-10 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <h2 className="text-3xl font-bold text-blue-600 mb-3">Casamento</h2>
+        <p className="text-gray-700 text-lg">
+          Informações sobre preparação, documentos e agendamento serão 
+          adicionadas em breve.
         </p>
-        <p style={{ textAlign: "justify", color: "#333" }}>
-          Para celebrar o casamento na Paróquia Santa Teresinha, os noivos devem participar do 
-          <strong> curso de preparação matrimonial</strong>, realizado periodicamente pela pastoral
-          familiar. Também é necessário apresentar os documentos pessoais e agendar a data com 
-          antecedência mínima de <strong>3 meses</strong>.
-        </p>
-        <p>
-           <strong>Informações e agendamentos:</strong>{" "}
-          <a
-            href="https://api.whatsapp.com/send/?phone=5586988779778"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp da secretaria
-          </a>
-        </p>
-      </section>
+      </motion.section>
 
-      
-
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <a
+      {/* Botão */}
+      <motion.div
+        className="text-center mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <motion.a
           href="/teste.html"
-          style={{
-            backgroundColor: "#007bff",
-            color: "white",
-            padding: "12px 24px",
-            borderRadius: "8px",
-            textDecoration: "none",
-          }}
+          className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold inline-block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
         >
-           Voltar ao site principal
-        </a>
-      </div>
-    </div>
+          Voltar ao site principal
+        </motion.a>
+      </motion.div>
+    </motion.div>
   );
 };
 

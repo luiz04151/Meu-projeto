@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export function useTestimonials() {
   const [testemunhos, setTestemunhos] = useState<string[]>([
-    "“Deus transformou minha vida através da oração.” — João M.",
-    "“Encontrei paz na comunidade Santa Teresinha.” — Maria C.",
+    "Deixe seu testemunho aqui!",
+    
   ]);
 
   const addTestemunho = (novo: string) => {
